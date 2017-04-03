@@ -1,0 +1,416 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF484C201E91586B00D0DFF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF484C1F1E91586B00D0DFF6 /* AppDelegate.swift */; };
+		EF484C251E91586B00D0DFF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF484C231E91586B00D0DFF6 /* Main.storyboard */; };
+		EF484C271E91586B00D0DFF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF484C261E91586B00D0DFF6 /* Assets.xcassets */; };
+		EF484C2A1E91586B00D0DFF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF484C281E91586B00D0DFF6 /* LaunchScreen.storyboard */; };
+		EF484C381E915C4200D0DFF6 /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF484C371E915C4200D0DFF6 /* CloudKitManager.swift */; };
+		EF484C3A1E915CDA00D0DFF6 /* CloudKitSyncable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF484C391E915CDA00D0DFF6 /* CloudKitSyncable.swift */; };
+		EF484C3C1E915DB500D0DFF6 /* JournalDaily.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF484C3B1E915DB500D0DFF6 /* JournalDaily.swift */; };
+		EF484C3E1E91917C00D0DFF6 /* JournalDailyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF484C3D1E91917C00D0DFF6 /* JournalDailyController.swift */; };
+		EFC529E81E9294770013FE11 /* JournalDailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC529E71E9294770013FE11 /* JournalDailyViewController.swift */; };
+		EFC529EB1E92B1590013FE11 /* JournalDailyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC529EA1E92B1590013FE11 /* JournalDailyTableViewController.swift */; };
+		EFC529EE1E92BDA80013FE11 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC529ED1E92BDA80013FE11 /* CloudKit.framework */; };
+		EFC529F11E92ED9A0013FE11 /* JournalDailyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC529F01E92ED9A0013FE11 /* JournalDailyTableViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EF484C1C1E91586B00D0DFF6 /* JournalDaily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JournalDaily.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF484C1F1E91586B00D0DFF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EF484C241E91586B00D0DFF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EF484C261E91586B00D0DFF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF484C291E91586B00D0DFF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF484C2B1E91586B00D0DFF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF484C371E915C4200D0DFF6 /* CloudKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
+		EF484C391E915CDA00D0DFF6 /* CloudKitSyncable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitSyncable.swift; sourceTree = "<group>"; };
+		EF484C3B1E915DB500D0DFF6 /* JournalDaily.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalDaily.swift; sourceTree = "<group>"; };
+		EF484C3D1E91917C00D0DFF6 /* JournalDailyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalDailyController.swift; sourceTree = "<group>"; };
+		EFC529E71E9294770013FE11 /* JournalDailyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalDailyViewController.swift; sourceTree = "<group>"; };
+		EFC529E91E92AC8D0013FE11 /* JournalDaily.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JournalDaily.entitlements; sourceTree = "<group>"; };
+		EFC529EA1E92B1590013FE11 /* JournalDailyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalDailyTableViewController.swift; sourceTree = "<group>"; };
+		EFC529ED1E92BDA80013FE11 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		EFC529F01E92ED9A0013FE11 /* JournalDailyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalDailyTableViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF484C191E91586B00D0DFF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFC529EE1E92BDA80013FE11 /* CloudKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF484C131E91586B00D0DFF6 = {
+			isa = PBXGroup;
+			children = (
+				EF484C1E1E91586B00D0DFF6 /* JournalDaily */,
+				EF484C1D1E91586B00D0DFF6 /* Products */,
+				EFC529EC1E92BDA80013FE11 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EF484C1D1E91586B00D0DFF6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF484C1C1E91586B00D0DFF6 /* JournalDaily.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF484C1E1E91586B00D0DFF6 /* JournalDaily */ = {
+			isa = PBXGroup;
+			children = (
+				EFC529E91E92AC8D0013FE11 /* JournalDaily.entitlements */,
+				EF484C351E915B6D00D0DFF6 /* Model */,
+				EF484C341E915B6400D0DFF6 /* Model Controller */,
+				EF484C331E915B5700D0DFF6 /* View Controller */,
+				EF484C361E915B7E00D0DFF6 /* CloudKit Manager */,
+				EFC529EF1E92ED650013FE11 /* View */,
+				EF484C321E915B4E00D0DFF6 /* Resources */,
+				EF484C311E915B3E00D0DFF6 /* Storyboards */,
+			);
+			path = JournalDaily;
+			sourceTree = "<group>";
+		};
+		EF484C311E915B3E00D0DFF6 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				EF484C231E91586B00D0DFF6 /* Main.storyboard */,
+				EF484C281E91586B00D0DFF6 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		EF484C321E915B4E00D0DFF6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EF484C1F1E91586B00D0DFF6 /* AppDelegate.swift */,
+				EF484C261E91586B00D0DFF6 /* Assets.xcassets */,
+				EF484C2B1E91586B00D0DFF6 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		EF484C331E915B5700D0DFF6 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EFC529E71E9294770013FE11 /* JournalDailyViewController.swift */,
+				EFC529EA1E92B1590013FE11 /* JournalDailyTableViewController.swift */,
+			);
+			name = "View Controller";
+			sourceTree = "<group>";
+		};
+		EF484C341E915B6400D0DFF6 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EF484C3D1E91917C00D0DFF6 /* JournalDailyController.swift */,
+			);
+			name = "Model Controller";
+			sourceTree = "<group>";
+		};
+		EF484C351E915B6D00D0DFF6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EF484C3B1E915DB500D0DFF6 /* JournalDaily.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		EF484C361E915B7E00D0DFF6 /* CloudKit Manager */ = {
+			isa = PBXGroup;
+			children = (
+				EF484C371E915C4200D0DFF6 /* CloudKitManager.swift */,
+				EF484C391E915CDA00D0DFF6 /* CloudKitSyncable.swift */,
+			);
+			name = "CloudKit Manager";
+			sourceTree = "<group>";
+		};
+		EFC529EC1E92BDA80013FE11 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EFC529ED1E92BDA80013FE11 /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EFC529EF1E92ED650013FE11 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EFC529F01E92ED9A0013FE11 /* JournalDailyTableViewCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF484C1B1E91586B00D0DFF6 /* JournalDaily */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF484C2E1E91586B00D0DFF6 /* Build configuration list for PBXNativeTarget "JournalDaily" */;
+			buildPhases = (
+				EF484C181E91586B00D0DFF6 /* Sources */,
+				EF484C191E91586B00D0DFF6 /* Frameworks */,
+				EF484C1A1E91586B00D0DFF6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JournalDaily;
+			productName = JournalDaily;
+			productReference = EF484C1C1E91586B00D0DFF6 /* JournalDaily.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF484C141E91586B00D0DFF6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Hayden Hastings";
+				TargetAttributes = {
+					EF484C1B1E91586B00D0DFF6 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = 7V775U4648;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = EF484C171E91586B00D0DFF6 /* Build configuration list for PBXProject "JournalDaily" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF484C131E91586B00D0DFF6;
+			productRefGroup = EF484C1D1E91586B00D0DFF6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF484C1B1E91586B00D0DFF6 /* JournalDaily */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF484C1A1E91586B00D0DFF6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF484C2A1E91586B00D0DFF6 /* LaunchScreen.storyboard in Resources */,
+				EF484C271E91586B00D0DFF6 /* Assets.xcassets in Resources */,
+				EF484C251E91586B00D0DFF6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF484C181E91586B00D0DFF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFC529E81E9294770013FE11 /* JournalDailyViewController.swift in Sources */,
+				EFC529EB1E92B1590013FE11 /* JournalDailyTableViewController.swift in Sources */,
+				EF484C381E915C4200D0DFF6 /* CloudKitManager.swift in Sources */,
+				EFC529F11E92ED9A0013FE11 /* JournalDailyTableViewCell.swift in Sources */,
+				EF484C3A1E915CDA00D0DFF6 /* CloudKitSyncable.swift in Sources */,
+				EF484C201E91586B00D0DFF6 /* AppDelegate.swift in Sources */,
+				EF484C3C1E915DB500D0DFF6 /* JournalDaily.swift in Sources */,
+				EF484C3E1E91917C00D0DFF6 /* JournalDailyController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EF484C231E91586B00D0DFF6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF484C241E91586B00D0DFF6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EF484C281E91586B00D0DFF6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF484C291E91586B00D0DFF6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF484C2C1E91586B00D0DFF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EF484C2D1E91586B00D0DFF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF484C2F1E91586B00D0DFF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = JournalDaily/JournalDaily.entitlements;
+				DEVELOPMENT_TEAM = 7V775U4648;
+				INFOPLIST_FILE = JournalDaily/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.HaydenHastings.JournalDaily;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		EF484C301E91586B00D0DFF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = JournalDaily/JournalDaily.entitlements;
+				DEVELOPMENT_TEAM = 7V775U4648;
+				INFOPLIST_FILE = JournalDaily/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.HaydenHastings.JournalDaily;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF484C171E91586B00D0DFF6 /* Build configuration list for PBXProject "JournalDaily" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF484C2C1E91586B00D0DFF6 /* Debug */,
+				EF484C2D1E91586B00D0DFF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF484C2E1E91586B00D0DFF6 /* Build configuration list for PBXNativeTarget "JournalDaily" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF484C2F1E91586B00D0DFF6 /* Debug */,
+				EF484C301E91586B00D0DFF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF484C141E91586B00D0DFF6 /* Project object */;
+}
