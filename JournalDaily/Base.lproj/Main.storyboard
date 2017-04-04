@@ -107,7 +107,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.96233385801315308" green="0.95961850881576538" blue="0.96924644708633423" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="wvf-b1-HH7" secondAttribute="leading" id="1y7-gI-GxP"/>
                             <constraint firstItem="cua-tG-k5g" firstAttribute="leading" secondItem="agq-ye-rEc" secondAttribute="leading" id="4em-O6-TEk"/>
@@ -183,7 +183,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.96233385801315308" green="0.95961850881576538" blue="0.96924644708633423" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="kwY-QG-Lg4" firstAttribute="leading" secondItem="dUG-GH-rP5" secondAttribute="leading" id="7oX-gl-DFI"/>
