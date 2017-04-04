@@ -173,6 +173,15 @@ class JournalDailyViewController: UIViewController, SFSpeechRecognizerDelegate, 
         }
     }
     
+    func dismissKeyboard() {
+        titleTextField.resignFirstResponder()
+        journalTextView.resignFirstResponder()
+    }
+    
+    @IBAction func keyboardViewTapped(_ sender: Any) {
+        dismissKeyboard()
+    }
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             journalPictureImageView.image = image
