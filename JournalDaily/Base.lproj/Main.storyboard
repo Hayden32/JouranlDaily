@@ -15,10 +15,11 @@
         <scene sceneID="Mzu-xO-RmK">
             <objects>
                 <tableViewController id="0s2-GY-X5L" customClass="JournalDailyTableViewController" customModule="JournalDaily" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="58" sectionHeaderHeight="28" sectionFooterHeight="28" id="C3u-na-Aso">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="58" sectionHeaderHeight="28" sectionFooterHeight="28" id="C3u-na-Aso">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="journalCell" rowHeight="58" id="vEX-8v-RyL" customClass="JournalDailyTableViewCell" customModule="JournalDaily" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="58"/>
@@ -28,13 +29,13 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yx1-S0-vWR">
-                                            <rect key="frame" x="288" y="0.0" width="87" height="57"/>
+                                            <rect key="frame" x="286.5" y="0.0" width="88.5" height="58"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="yx1-S0-vWR" secondAttribute="height" multiplier="29:19" id="6lx-m5-8gy"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vdb-B8-b10">
-                                            <rect key="frame" x="8" y="8" width="270" height="42"/>
+                                            <rect key="frame" x="8" y="8" width="268.5" height="42"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -50,10 +51,11 @@
                                         <constraint firstAttribute="topMargin" secondItem="vdb-B8-b10" secondAttribute="top" id="yns-Kw-5jW"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.96065574884414673" green="0.9606977105140686" blue="0.96883314847946167" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="journalImageView" destination="yx1-S0-vWR" id="Gz6-mW-Zkv"/>
                                     <outlet property="titleLable" destination="vdb-B8-b10" id="Ays-Jo-v2X"/>
-                                    <segue destination="6Qh-VI-gzE" kind="show" identifier="toJournalVC" id="FcO-lf-Kdr"/>
+                                    <segue destination="Z0P-yg-Lo4" kind="show" identifier="toJournalVC" id="J9G-p3-jla"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -65,14 +67,64 @@
                     <navigationItem key="navigationItem" id="vxh-nz-V2h">
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="ABK-d9-Jj7">
                             <connections>
-                                <segue destination="6Qh-VI-gzE" kind="show" id="xCM-b4-9IG"/>
+                                <segue destination="6Qh-VI-gzE" kind="show" identifier="" id="xCM-b4-9IG"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jvb-yC-wMY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1031.2" y="185.75712143928038"/>
+            <point key="canvasLocation" x="1030" y="313"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="SRE-fa-aOd">
+            <objects>
+                <viewController id="Z0P-yg-Lo4" customClass="JouranlDailyEditingViewController" customModule="JournalDaily" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VgN-ed-oos"/>
+                        <viewControllerLayoutGuide type="bottom" id="b2v-gM-q5S"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="agq-ye-rEc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cua-tG-k5g">
+                                <rect key="frame" x="67" y="88" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SbI-Y2-5Ir">
+                                <rect key="frame" x="16" y="224" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wvf-b1-HH7">
+                                <rect key="frame" x="16" y="262" width="343" height="385"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="K8y-hl-JOi">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="OeW-qS-XWE">
+                            <connections>
+                                <segue destination="6Qh-VI-gzE" kind="show" identifier="toJournalEditingVC" id="lCw-aa-IN7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="journalPictureImageView" destination="cua-tG-k5g" id="3OX-gf-vZV"/>
+                        <outlet property="journalTextView" destination="wvf-b1-HH7" id="K0h-LO-5nN"/>
+                        <outlet property="titleTextField" destination="SbI-Y2-5Ir" id="Eni-ub-dq3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3bU-A5-hT4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1031" y="1036"/>
         </scene>
         <!--Title-->
         <scene sceneID="8vH-kp-Yat">
@@ -86,13 +138,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozE-4I-aBd">
-                                <rect key="frame" x="163" y="629" width="49" height="30"/>
-                                <state key="normal" title="Record"/>
-                                <connections>
-                                    <action selector="recordButtonTapped:" destination="6Qh-VI-gzE" eventType="touchUpInside" id="mjf-Yh-UMQ"/>
-                                </connections>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hcR-XN-eWz">
                                 <rect key="frame" x="16" y="225" width="343" height="396"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -111,43 +156,38 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Uf-nQ-wCT">
-                                <rect key="frame" x="236" y="629" width="32" height="30"/>
-                                <state key="normal" title="Stop"/>
-                                <connections>
-                                    <action selector="stopButtonTapped:" destination="6Qh-VI-gzE" eventType="touchUpInside" id="QA4-Td-LSI"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBQ-eP-fIC">
-                                <rect key="frame" x="69" y="629" width="74" height="30"/>
+                                <rect key="frame" x="285" y="629" width="74" height="30"/>
                                 <state key="normal" title="Add Image"/>
                                 <connections>
                                     <action selector="addImageButtonTapped:" destination="6Qh-VI-gzE" eventType="touchUpInside" id="CTw-Kq-cXb"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozE-4I-aBd">
+                                <rect key="frame" x="133" y="629" width="108" height="30"/>
+                                <state key="normal" title="Start Recording"/>
+                                <connections>
+                                    <action selector="microphoneTapped:" destination="6Qh-VI-gzE" eventType="touchUpInside" id="5kZ-IF-b9i"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="OBQ-eP-fIC" firstAttribute="top" secondItem="hcR-XN-eWz" secondAttribute="bottom" constant="8" id="3dd-zM-iyF"/>
                             <constraint firstItem="kwY-QG-Lg4" firstAttribute="leading" secondItem="dUG-GH-rP5" secondAttribute="leading" id="7oX-gl-DFI"/>
-                            <constraint firstItem="8Uf-nQ-wCT" firstAttribute="leading" secondItem="ozE-4I-aBd" secondAttribute="trailing" constant="24" id="9im-vg-F4x"/>
+                            <constraint firstItem="MBs-jq-Rt5" firstAttribute="top" secondItem="ozE-4I-aBd" secondAttribute="bottom" constant="8" id="9tX-uZ-dKW"/>
                             <constraint firstAttribute="trailing" secondItem="kwY-QG-Lg4" secondAttribute="trailing" id="AdD-ja-Vfv"/>
                             <constraint firstItem="hcR-XN-eWz" firstAttribute="trailing" secondItem="dUG-GH-rP5" secondAttribute="trailingMargin" id="CJB-Fa-NNo"/>
-                            <constraint firstItem="MBs-jq-Rt5" firstAttribute="top" secondItem="OBQ-eP-fIC" secondAttribute="bottom" constant="8" id="Gmn-xk-OhU"/>
-                            <constraint firstItem="8Uf-nQ-wCT" firstAttribute="leading" secondItem="ozE-4I-aBd" secondAttribute="trailing" constant="24" id="HuX-9J-IAu"/>
-                            <constraint firstItem="OBQ-eP-fIC" firstAttribute="leading" secondItem="dUG-GH-rP5" secondAttribute="leadingMargin" constant="53" id="LpT-XM-KTO"/>
-                            <constraint firstItem="8Uf-nQ-wCT" firstAttribute="top" secondItem="hcR-XN-eWz" secondAttribute="bottom" constant="8" id="Mnr-tA-jG6"/>
-                            <constraint firstItem="MBs-jq-Rt5" firstAttribute="top" secondItem="8Uf-nQ-wCT" secondAttribute="bottom" constant="8" id="OhO-A8-pob"/>
-                            <constraint firstItem="MBs-jq-Rt5" firstAttribute="top" secondItem="ozE-4I-aBd" secondAttribute="bottom" constant="8" id="QM5-Sw-k7H"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="8Uf-nQ-wCT" secondAttribute="trailing" constant="91" id="R7P-Sw-MBF"/>
+                            <constraint firstItem="ozE-4I-aBd" firstAttribute="top" secondItem="hcR-XN-eWz" secondAttribute="bottom" constant="8" id="DYp-vm-yUK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OBQ-eP-fIC" secondAttribute="trailing" id="Gk1-iq-VAo"/>
+                            <constraint firstItem="MBs-jq-Rt5" firstAttribute="top" secondItem="OBQ-eP-fIC" secondAttribute="bottom" constant="8" id="ITD-dP-svN"/>
+                            <constraint firstItem="OBQ-eP-fIC" firstAttribute="top" secondItem="hcR-XN-eWz" secondAttribute="bottom" constant="8" id="QwB-0R-Iqz"/>
                             <constraint firstItem="hcR-XN-eWz" firstAttribute="top" secondItem="Klf-iF-jIO" secondAttribute="bottom" id="Rgs-H7-Ejg"/>
                             <constraint firstItem="Klf-iF-jIO" firstAttribute="top" secondItem="kwY-QG-Lg4" secondAttribute="bottom" id="X9V-mv-FJ0"/>
                             <constraint firstItem="hcR-XN-eWz" firstAttribute="leading" secondItem="dUG-GH-rP5" secondAttribute="leadingMargin" id="a3m-iM-nQX"/>
-                            <constraint firstItem="ozE-4I-aBd" firstAttribute="top" secondItem="hcR-XN-eWz" secondAttribute="bottom" constant="8" id="jiy-YH-vGX"/>
+                            <constraint firstItem="OBQ-eP-fIC" firstAttribute="leading" secondItem="ozE-4I-aBd" secondAttribute="trailing" constant="44" id="b2P-Gu-c4Y"/>
+                            <constraint firstItem="ozE-4I-aBd" firstAttribute="leading" secondItem="dUG-GH-rP5" secondAttribute="leadingMargin" constant="117" id="go6-As-MoZ"/>
                             <constraint firstItem="Klf-iF-jIO" firstAttribute="leading" secondItem="dUG-GH-rP5" secondAttribute="leadingMargin" id="pBs-0r-GlS"/>
-                            <constraint firstItem="ozE-4I-aBd" firstAttribute="leading" secondItem="OBQ-eP-fIC" secondAttribute="trailing" constant="20" id="wNX-UX-OUL"/>
                             <constraint firstItem="kwY-QG-Lg4" firstAttribute="top" secondItem="ukU-Z2-EdV" secondAttribute="bottom" id="y8g-6m-qTr"/>
-                            <constraint firstItem="ozE-4I-aBd" firstAttribute="leading" secondItem="OBQ-eP-fIC" secondAttribute="trailing" constant="20" id="zMk-vs-zfP"/>
                             <constraint firstItem="Klf-iF-jIO" firstAttribute="trailing" secondItem="dUG-GH-rP5" secondAttribute="trailingMargin" id="ztf-Oe-UdF"/>
                         </constraints>
                     </view>
@@ -161,12 +201,13 @@
                     <connections>
                         <outlet property="journalPictureImageView" destination="kwY-QG-Lg4" id="Rrs-S1-WSa"/>
                         <outlet property="journalTextView" destination="hcR-XN-eWz" id="qyZ-Ef-Dcf"/>
+                        <outlet property="microphoneButton" destination="ozE-4I-aBd" id="aQ8-fH-wu7"/>
                         <outlet property="titleTextField" destination="Klf-iF-jIO" id="LP8-mZ-Dhd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wm8-kF-wfe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1972" y="185.75712143928038"/>
+            <point key="canvasLocation" x="1828" y="313"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IO8-gK-K6z">
@@ -184,10 +225,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Yy-wR-2gn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="92" y="185.75712143928038"/>
+            <point key="canvasLocation" x="241" y="313"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="FcO-lf-Kdr"/>
+        <segue reference="xCM-b4-9IG"/>
     </inferredMetricsTieBreakers>
 </document>

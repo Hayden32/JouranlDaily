@@ -19,6 +19,7 @@
 		EFC529EB1E92B1590013FE11 /* JournalDailyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC529EA1E92B1590013FE11 /* JournalDailyTableViewController.swift */; };
 		EFC529EE1E92BDA80013FE11 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC529ED1E92BDA80013FE11 /* CloudKit.framework */; };
 		EFC529F11E92ED9A0013FE11 /* JournalDailyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC529F01E92ED9A0013FE11 /* JournalDailyTableViewCell.swift */; };
+		EFD471211E94020A000F82BF /* JouranlDailyEditingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD471201E94020A000F82BF /* JouranlDailyEditingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		EFC529EA1E92B1590013FE11 /* JournalDailyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalDailyTableViewController.swift; sourceTree = "<group>"; };
 		EFC529ED1E92BDA80013FE11 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		EFC529F01E92ED9A0013FE11 /* JournalDailyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalDailyTableViewCell.swift; sourceTree = "<group>"; };
+		EFD471201E94020A000F82BF /* JouranlDailyEditingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JouranlDailyEditingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			children = (
 				EFC529E71E9294770013FE11 /* JournalDailyViewController.swift */,
 				EFC529EA1E92B1590013FE11 /* JournalDailyTableViewController.swift */,
+				EFD471201E94020A000F82BF /* JouranlDailyEditingViewController.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 				EFC529E81E9294770013FE11 /* JournalDailyViewController.swift in Sources */,
 				EFC529EB1E92B1590013FE11 /* JournalDailyTableViewController.swift in Sources */,
 				EF484C381E915C4200D0DFF6 /* CloudKitManager.swift in Sources */,
+				EFD471211E94020A000F82BF /* JouranlDailyEditingViewController.swift in Sources */,
 				EFC529F11E92ED9A0013FE11 /* JournalDailyTableViewCell.swift in Sources */,
 				EF484C3A1E915CDA00D0DFF6 /* CloudKitSyncable.swift in Sources */,
 				EF484C201E91586B00D0DFF6 /* AppDelegate.swift in Sources */,

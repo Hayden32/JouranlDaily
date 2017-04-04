@@ -18,6 +18,7 @@ class JournalDailyController {
     
     let cloudKitManager = CloudKitManager()
     
+    
     func createJournal(image: UIImage, title: String, journalText: String, completion: @escaping (Error?) -> Void) {
         // Set's the properties of the jpg image
         guard let data = UIImageJPEGRepresentation(image, 0.5)

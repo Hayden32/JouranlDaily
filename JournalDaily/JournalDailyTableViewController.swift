@@ -35,7 +35,6 @@ class JournalDailyTableViewController: UITableViewController {
         return JournalDailyController.shared.journals.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "journalCell", for: indexPath) as? JournalDailyTableViewCell
         let journal = JournalDailyController.shared.journals[indexPath.row]
@@ -44,19 +43,15 @@ class JournalDailyTableViewController: UITableViewController {
         return cell ?? UITableViewCell()
     }
     
-
-
-    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toJournalVC" {
             guard let indexPath = tableView.indexPathForSelectedRow,
-                let journalDetailVC = segue.destination as? JournalDailyViewController else { return }
+                let journalDetailVC = segue.destination as? JouranlDailyEditingViewController else { return }
             let journals = JournalDailyController.shared.journals[indexPath.row]
             journalDetailVC.journal = journals
         }
-        
     }
 }

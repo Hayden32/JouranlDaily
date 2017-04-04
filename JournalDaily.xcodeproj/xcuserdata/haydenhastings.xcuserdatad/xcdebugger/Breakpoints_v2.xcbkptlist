@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JournalDaily/JournalDailyViewController.swift"
-            timestampString = "512941874.190812"
+            timestampString = "513023130.869333"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
             landmarkName = "saveButtonTapped(_:)"
             landmarkType = "7">
             <Locations>
@@ -26,12 +26,12 @@
                   moduleName = "JournalDaily"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/haydenhastings/Desktop/JournalDaily/JournalDaily/JournalDailyViewController.swift"
-                  timestampString = "512946449.601375"
+                  timestampString = "513027693.595835"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "97"
-                  endingLineNumber = "97"
-                  offsetFromSymbolStart = "19">
+                  startingLineNumber = "169"
+                  endingLineNumber = "169"
+                  offsetFromSymbolStart = "24">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -41,12 +41,12 @@
                   moduleName = "JournalDaily"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/haydenhastings/Desktop/JournalDaily/JournalDaily/JournalDailyViewController.swift"
-                  timestampString = "512946449.604263"
+                  timestampString = "513027693.597653"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "97"
-                  endingLineNumber = "97"
-                  offsetFromSymbolStart = "59">
+                  startingLineNumber = "169"
+                  endingLineNumber = "169"
+                  offsetFromSymbolStart = "60">
                </Location>
             </Locations>
          </BreakpointContent>
