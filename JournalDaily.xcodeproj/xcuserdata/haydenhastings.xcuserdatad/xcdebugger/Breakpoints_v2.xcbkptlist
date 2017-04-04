@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JournalDaily/JournalDailyViewController.swift"
-            timestampString = "513023130.869333"
+            timestampString = "513031422.937494"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "169"
-            endingLineNumber = "169"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
             landmarkName = "saveButtonTapped(_:)"
             landmarkType = "7">
             <Locations>
@@ -26,12 +26,12 @@
                   moduleName = "JournalDaily"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/haydenhastings/Desktop/JournalDaily/JournalDaily/JournalDailyViewController.swift"
-                  timestampString = "513027693.595835"
+                  timestampString = "513031424.002125"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "169"
-                  endingLineNumber = "169"
-                  offsetFromSymbolStart = "24">
+                  startingLineNumber = "167"
+                  endingLineNumber = "167"
+                  offsetFromSymbolStart = "19">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -41,14 +41,30 @@
                   moduleName = "JournalDaily"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/haydenhastings/Desktop/JournalDaily/JournalDaily/JournalDailyViewController.swift"
-                  timestampString = "513027693.597653"
+                  timestampString = "513031424.00389"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "169"
-                  endingLineNumber = "169"
-                  offsetFromSymbolStart = "60">
+                  startingLineNumber = "167"
+                  endingLineNumber = "167"
+                  offsetFromSymbolStart = "59">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JournalDaily/JouranlDailyEditingViewController.swift"
+            timestampString = "513036598.704409"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "prepare(for:sender:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

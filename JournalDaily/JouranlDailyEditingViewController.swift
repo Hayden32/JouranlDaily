@@ -22,8 +22,6 @@ class JouranlDailyEditingViewController: UIViewController {
         updateViews()
     }
     
-    
-    
     func updateViews() {
         guard let journal = journal else { return }
         titleTextField.text = journal.title
@@ -31,14 +29,13 @@ class JouranlDailyEditingViewController: UIViewController {
         journalTextView.text = journal.journalText
     }
     
-    
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toJournalEditingVC" {
-            guard let viewController = segue.destination as? JournalDailyViewController else { return }
-            
+            guard let destinationViewController = segue.destination as? JournalDailyViewController else { return }
+            destinationViewController.journal = self.journal
         }
     }
 }

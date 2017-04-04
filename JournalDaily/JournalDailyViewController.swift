@@ -11,11 +11,7 @@ import Speech
 
 class JournalDailyViewController: UIViewController, SFSpeechRecognizerDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
-    var journal: JournalDaily? {
-        didSet {
-            loadView()
-        }
-    }
+    var journal: JournalDaily?
     
     @IBOutlet weak var journalPictureImageView: UIImageView!
     @IBOutlet weak var titleTextField: UITextField!
@@ -28,6 +24,8 @@ class JournalDailyViewController: UIViewController, SFSpeechRecognizerDelegate, 
         microphoneButton.isEnabled = false  //2
         
         speechRecognizer?.delegate = self  //3
+        
+        updateViews()
         
         SFSpeechRecognizer.requestAuthorization { (authStatus) in  //4
             
@@ -190,15 +188,4 @@ class JournalDailyViewController: UIViewController, SFSpeechRecognizerDelegate, 
         journalPictureImageView.image = journal.photo
         journalTextView.text = journal.journalText
     }
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }
