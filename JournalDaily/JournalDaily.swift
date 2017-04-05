@@ -15,17 +15,20 @@ class JournalDaily: CloudKitSyncable {
     static let kType = "JouranlDaily"
     static let kPhotoData = "photoData"
     static let kTitle = "title"
+    static let kTimeStamp = "timeStamp"
     static let kJournaltext = "journalText"
     
-    let photoData: Data?
-    let title: String
-    let journalText: String
+    var photoData: Data?
+    var title: String
+    var journalText: String
+    var timeStamp: Date
     var cloudKitRecordID: CKRecordID?
     
-    init(photoData: Data?, title: String, journalText: String) {
+    init(photoData: Data?, title: String, journalText: String, timeStamp: Date = Date()) {
         self.photoData = photoData
         self.title = title
         self.journalText = journalText
+        self.timeStamp = timeStamp
     }
     
     var photo: UIImage? {
@@ -43,10 +46,11 @@ class JournalDaily: CloudKitSyncable {
     convenience required init?(record: CKRecord) {
         guard let title = record[JournalDaily.kTitle] as? String,
             let journalText = record[JournalDaily.kJournaltext] as? String,
+            let timeStamp = record.creationDate,
             let photoAsset = record[JournalDaily.kPhotoData] as? CKAsset
             else { return nil }
         let photoData = try? Data(contentsOf: photoAsset.fileURL)
-        self.init(photoData: photoData, title: title, journalText: journalText)
+        self.init(photoData: photoData, title: title, journalText: journalText, timeStamp: timeStamp)
         
         cloudKitRecordID = record.recordID
     }
@@ -69,6 +73,7 @@ extension CKRecord {
         self.init(recordType: "JournalDaily", recordID: recordID)
         self.setValue(journalDaily.title, forKey: JournalDaily.kTitle)
         self.setValue(journalDaily.journalText, forKey: JournalDaily.kJournaltext)
+        self[JournalDaily.kTimeStamp] = journalDaily.timeStamp as CKRecordValue?
         self.setValue(CKAsset(fileURL: journalDaily.temporaryPhotoURL), forKey: JournalDaily.kPhotoData)
     }
     

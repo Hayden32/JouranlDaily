@@ -6,64 +6,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "JournalDaily/JournalDailyViewController.swift"
-            timestampString = "513031422.937494"
+            filePath = "JournalDaily/JouranlDailyEditingViewController.swift"
+            timestampString = "513101504.534206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "167"
-            endingLineNumber = "167"
-            landmarkName = "saveButtonTapped(_:)"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "JournalDaily.JournalDailyViewController.(saveButtonTapped (Any) -&gt; ()).(closure #1)"
-                  moduleName = "JournalDaily"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/haydenhastings/Desktop/JournalDaily/JournalDaily/JournalDailyViewController.swift"
-                  timestampString = "513031424.002125"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "167"
-                  endingLineNumber = "167"
-                  offsetFromSymbolStart = "19">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "JournalDaily.JournalDailyViewController.(saveButtonTapped (Any) -&gt; ()).(closure #1)"
-                  moduleName = "JournalDaily"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/haydenhastings/Desktop/JournalDaily/JournalDaily/JournalDailyViewController.swift"
-                  timestampString = "513031424.00389"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "167"
-                  endingLineNumber = "167"
-                  offsetFromSymbolStart = "59">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "JournalDaily/JouranlDailyEditingViewController.swift"
-            timestampString = "513036598.704409"
+            filePath = "JournalDaily/JournalDailyViewController.swift"
+            timestampString = "513119686.937762"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "prepare(for:sender:)"
+            startingLineNumber = "182"
+            endingLineNumber = "182"
+            landmarkName = "saveButtonTapped(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

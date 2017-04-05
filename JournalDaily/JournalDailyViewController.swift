@@ -18,15 +18,21 @@ class JournalDailyViewController: UIViewController, SFSpeechRecognizerDelegate, 
     @IBOutlet weak var journalTextView: UITextView!
     @IBOutlet weak var microphoneButton: UIButton!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        if let journal = journal {
+            updateViews(journal: journal)
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
         microphoneButton.isEnabled = false  //2
         
         speechRecognizer?.delegate = self  //3
-        
-        updateViews()
-        
+        if let journal = journal {
+            updateViews(journal: journal)
+        }
         SFSpeechRecognizer.requestAuthorization { (authStatus) in  //4
             
             var isButtonEnabled = false
@@ -145,7 +151,7 @@ class JournalDailyViewController: UIViewController, SFSpeechRecognizerDelegate, 
             microphoneButton.setTitle("Stop Recording", for: .normal)
         }
     }
-
+    
     @IBAction func addImageButtonTapped(_ sender: Any) {
         let image = UIImagePickerController()
         image.delegate = self
@@ -160,17 +166,38 @@ class JournalDailyViewController: UIViewController, SFSpeechRecognizerDelegate, 
         
         guard let title = titleTextField.text,
             let journal = journalTextView.text,
-            let photo = journalPictureImageView.image else { return }
+            let photo = journalPictureImageView.image,
+            let photoData = UIImageJPEGRepresentation(photo, 0.5)
+            else { return }
         
-        JournalDailyController.shared.createJournal(image: photo, title: title, journalText: journal) { (error) in
+        if self.journal != nil {
+            // update journal
+            self.journal?.title = title
+            self.journal?.journalText = journal
+            self.journal?.photoData = photoData
             
-            if let error = error {
-                print(error)
-            }
-            DispatchQueue.main.async {
-                _ = self.navigationController?.popViewController(animated: true)
+            // save to cloudKit
+            
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let journalDailyTableVC = storyboard.instantiateViewController(withIdentifier: "journalDailyTVC")
+            
+            _ = self.navigationController?.popToRootViewController(animated: true)
+            
+        } else {        // create new entry
+            
+            JournalDailyController.shared.createJournal(image: photo, title: title, journalText: journal) { (error) in
+                
+                if let error = error {
+                    print(error)
+                }
+                DispatchQueue.main.async {
+                    _ = self.navigationController?.popViewController(animated: true)
+                }
             }
         }
+        
+        
     }
     
     func dismissKeyboard() {
@@ -191,8 +218,9 @@ class JournalDailyViewController: UIViewController, SFSpeechRecognizerDelegate, 
         self.dismiss(animated: true, completion: nil)
     }
     
-    func updateViews() {
-        guard let journal = journal else { return }
+    func updateViews(journal: JournalDaily) {
+        self.journal = journal
+        //        guard let journal = journal else { return }
         titleTextField.text = journal.title
         journalPictureImageView.image = journal.photo
         journalTextView.text = journal.journalText

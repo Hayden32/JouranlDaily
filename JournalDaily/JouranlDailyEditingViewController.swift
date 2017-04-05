@@ -18,12 +18,13 @@ class JouranlDailyEditingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        updateViews()
+        if let journal = journal {
+        updateViews(journal: journal)
+        }
     }
-    
-    func updateViews() {
-        guard let journal = journal else { return }
+    func updateViews(journal: JournalDaily) {
+//        guard let journal = journal else { return }
+        self.journal = journal
         titleTextField.text = journal.title
         journalPictureImageView.image = journal.photo
         journalTextView.text = journal.journalText

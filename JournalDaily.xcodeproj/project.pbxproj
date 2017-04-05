@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF0DD5F81E956A5F0022C306 /* splashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0DD5F71E956A5F0022C306 /* splashScreenViewController.swift */; };
 		EF484C201E91586B00D0DFF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF484C1F1E91586B00D0DFF6 /* AppDelegate.swift */; };
 		EF484C251E91586B00D0DFF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF484C231E91586B00D0DFF6 /* Main.storyboard */; };
 		EF484C271E91586B00D0DFF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF484C261E91586B00D0DFF6 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF0DD5F71E956A5F0022C306 /* splashScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = splashScreenViewController.swift; sourceTree = "<group>"; };
 		EF484C1C1E91586B00D0DFF6 /* JournalDaily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JournalDaily.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF484C1F1E91586B00D0DFF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF484C241E91586B00D0DFF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				EFC529F01E92ED9A0013FE11 /* JournalDailyTableViewCell.swift */,
+				EF0DD5F71E956A5F0022C306 /* splashScreenViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF0DD5F81E956A5F0022C306 /* splashScreenViewController.swift in Sources */,
 				EFC529E81E9294770013FE11 /* JournalDailyViewController.swift in Sources */,
 				EFC529EB1E92B1590013FE11 /* JournalDailyTableViewController.swift in Sources */,
 				EF484C381E915C4200D0DFF6 /* CloudKitManager.swift in Sources */,

@@ -17,8 +17,7 @@ class JournalDailyController {
     static let shared = JournalDailyController()
     
     let cloudKitManager = CloudKitManager()
-    
-    
+
     func createJournal(image: UIImage, title: String, journalText: String, completion: @escaping (Error?) -> Void) {
         // Set's the properties of the jpg image
         guard let data = UIImageJPEGRepresentation(image, 0.5)
@@ -40,6 +39,11 @@ class JournalDailyController {
         }
         
     }
+    
+//    func update(journal: JournalDaily) {
+//        
+//        journal.journalText =
+//    }
     
     func fetchJournalsFromCloudKit(completion: @escaping ([JournalDaily]) -> Void) {
         let predicate = NSPredicate(value: true)

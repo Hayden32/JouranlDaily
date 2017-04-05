@@ -31,16 +31,16 @@ class JournalDailyTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+        
         return JournalDailyController.shared.journals.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "journalCell", for: indexPath) as? JournalDailyTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "journalCell", for: indexPath) as? JournalDailyTableViewCell else { return UITableViewCell() }
         let journal = JournalDailyController.shared.journals[indexPath.row]
         
-        cell?.updateWithJournal(journal: journal)
-        return cell ?? UITableViewCell()
+        cell.updateWithJournal(journal: journal)
+        return cell
     }
     
     // MARK: - Navigation
