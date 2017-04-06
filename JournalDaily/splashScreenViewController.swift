@@ -15,7 +15,7 @@ class splashScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        perform(Selector(("showNavController")), with: nil, afterDelay: 3)
+        perform(#selector(splashScreenViewController.showNavController), with: nil, afterDelay: 3)
         
         self.journalDailyLabel.center.x = self.view.frame.width + 105
         UIView.animate(withDuration: 1.0, delay: 0.5, usingSpringWithDamping: 0.7, initialSpringVelocity: 30, options: .allowAnimatedContent, animations: ({
