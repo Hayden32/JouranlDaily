@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Journal Daily Table View Controller-->
+        <!--Jouranl's-->
         <scene sceneID="Mzu-xO-RmK">
             <objects>
                 <tableViewController storyboardIdentifier="journalDailyTVC" id="0s2-GY-X5L" customClass="JournalDailyTableViewController" customModule="JournalDaily" customModuleProvider="target" sceneMemberID="viewController">
@@ -64,7 +64,7 @@
                             <outlet property="delegate" destination="0s2-GY-X5L" id="sfa-jg-fSs"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="vxh-nz-V2h">
+                    <navigationItem key="navigationItem" title="Jouranl's" id="vxh-nz-V2h">
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="ABK-d9-Jj7">
                             <connections>
                                 <segue destination="6Qh-VI-gzE" kind="show" identifier="" id="xCM-b4-9IG"/>
@@ -76,7 +76,7 @@
             </objects>
             <point key="canvasLocation" x="1030" y="313"/>
         </scene>
-        <!--Title-->
+        <!--Jouranl Entry-->
         <scene sceneID="SRE-fa-aOd">
             <objects>
                 <viewController id="Z0P-yg-Lo4" customClass="JouranlDailyEditingViewController" customModule="JournalDaily" customModuleProvider="target" sceneMemberID="viewController">
@@ -88,20 +88,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cua-tG-k5g">
-                                <rect key="frame" x="0.0" y="64" width="375" height="188"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cua-tG-k5g">
+                                <rect key="frame" x="0.0" y="64" width="375" height="219"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="188" id="Nwi-QP-iLm"/>
+                                    <constraint firstAttribute="height" constant="219" id="Nwi-QP-iLm"/>
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wvf-b1-HH7">
-                                <rect key="frame" x="0.0" y="282" width="375" height="385"/>
+                                <rect key="frame" x="0.0" y="314" width="375" height="353"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Title your journal: " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SbI-Y2-5Ir">
-                                <rect key="frame" x="0.0" y="252" width="375" height="30"/>
+                                <rect key="frame" x="0.0" y="283" width="375" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="x7l-Hx-7Az"/>
                                 </constraints>
@@ -115,7 +115,7 @@
                             <constraint firstItem="wvf-b1-HH7" firstAttribute="leading" secondItem="agq-ye-rEc" secondAttribute="leading" id="6aa-Ud-ptS"/>
                             <constraint firstItem="SbI-Y2-5Ir" firstAttribute="top" secondItem="cua-tG-k5g" secondAttribute="bottom" id="C3P-u9-x3j"/>
                             <constraint firstItem="cua-tG-k5g" firstAttribute="leading" secondItem="agq-ye-rEc" secondAttribute="leading" id="HiN-7e-usV"/>
-                            <constraint firstItem="wvf-b1-HH7" firstAttribute="top" secondItem="SbI-Y2-5Ir" secondAttribute="bottom" id="YwH-Lj-WdU"/>
+                            <constraint firstItem="wvf-b1-HH7" firstAttribute="top" secondItem="SbI-Y2-5Ir" secondAttribute="bottom" constant="1" id="YwH-Lj-WdU"/>
                             <constraint firstItem="SbI-Y2-5Ir" firstAttribute="leading" secondItem="cua-tG-k5g" secondAttribute="leading" id="hAt-Zu-wdB"/>
                             <constraint firstItem="SbI-Y2-5Ir" firstAttribute="trailing" secondItem="cua-tG-k5g" secondAttribute="trailing" id="pOI-ID-vvR"/>
                             <constraint firstItem="b2v-gM-q5S" firstAttribute="top" secondItem="wvf-b1-HH7" secondAttribute="bottom" id="sya-1b-yOg"/>
@@ -124,7 +124,7 @@
                             <constraint firstAttribute="trailing" secondItem="cua-tG-k5g" secondAttribute="trailing" id="zkS-C6-iky"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="K8y-hl-JOi">
+                    <navigationItem key="navigationItem" title="Jouranl Entry" id="K8y-hl-JOi">
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="OeW-qS-XWE">
                             <connections>
                                 <segue destination="6Qh-VI-gzE" kind="show" identifier="toJournalEditingVC" id="lCw-aa-IN7"/>
@@ -141,7 +141,7 @@
             </objects>
             <point key="canvasLocation" x="1029.5999999999999" y="1035.832083958021"/>
         </scene>
-        <!--Title-->
+        <!--Journal Daily View Controller-->
         <scene sceneID="8vH-kp-Yat">
             <objects>
                 <viewController id="6Qh-VI-gzE" customClass="JournalDailyViewController" customModule="JournalDaily" customModuleProvider="target" sceneMemberID="viewController">
@@ -210,7 +210,7 @@
                             <outletCollection property="gestureRecognizers" destination="Guh-zP-HXz" appends="YES" id="ZpZ-YB-8Uf"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="zhK-l5-5mb">
+                    <navigationItem key="navigationItem" id="zhK-l5-5mb">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="T8H-ca-EQf">
                             <connections>
                                 <action selector="saveButtonTapped:" destination="6Qh-VI-gzE" id="d4r-OI-fVR"/>
@@ -268,6 +268,7 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Journal Daily" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rPa-dQ-nIY">
                                 <rect key="frame" x="16" y="294" width="343" height="50"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rPa-dQ-nIY" secondAttribute="height" multiplier="343:50" id="Zsx-Zh-xoJ"/>
                                 </constraints>
@@ -290,6 +291,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="journalDailyLabel" destination="rPa-dQ-nIY" id="shg-9O-QhW"/>
                         <segue destination="XLu-V1-qM9" kind="show" identifier="splashScreen" id="gE2-Y9-wHp"/>
                     </connections>
                 </viewController>
@@ -302,6 +304,6 @@
         <image name="Logo" width="960" height="600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xCM-b4-9IG"/>
+        <segue reference="lCw-aa-IN7"/>
     </inferredMetricsTieBreakers>
 </document>

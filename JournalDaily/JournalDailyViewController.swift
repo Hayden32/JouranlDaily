@@ -165,28 +165,23 @@ class JournalDailyViewController: UIViewController, SFSpeechRecognizerDelegate, 
     @IBAction func saveButtonTapped(_ sender: Any) {
         
         guard let title = titleTextField.text,
-            let journal = journalTextView.text,
+            let journalText = journalTextView.text,
             let photo = journalPictureImageView.image,
             let photoData = UIImageJPEGRepresentation(photo, 0.5)
             else { return }
         
-        if self.journal != nil {
+        if let journal = self.journal {
             // update journal
-            self.journal?.title = title
-            self.journal?.journalText = journal
-            self.journal?.photoData = photoData
+            journal.title = title
+            journal.journalText = journalText
+            journal.photoData = photoData
             
             // save to cloudKit
-            
-            
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let journalDailyTableVC = storyboard.instantiateViewController(withIdentifier: "journalDailyTVC")
-            
-            _ = self.navigationController?.popToRootViewController(animated: true)
-            
+            JournalDailyController.shared.update(journal: journal)
+
         } else {        // create new entry
             
-            JournalDailyController.shared.createJournal(image: photo, title: title, journalText: journal) { (error) in
+            JournalDailyController.shared.createJournal(image: photo, title: title, journalText: journalText) { (error) in
                 
                 if let error = error {
                     print(error)
@@ -197,6 +192,7 @@ class JournalDailyViewController: UIViewController, SFSpeechRecognizerDelegate, 
             }
         }
         
+        _ = self.navigationController?.popToRootViewController(animated: true)
         
     }
     

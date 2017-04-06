@@ -10,25 +10,21 @@ import UIKit
 
 class splashScreenViewController: UIViewController {
 
+    @IBOutlet weak var journalDailyLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         perform(Selector(("showNavController")), with: nil, afterDelay: 3)
+        
+        self.journalDailyLabel.center.x = self.view.frame.width + 105
+        UIView.animate(withDuration: 1.0, delay: 0.5, usingSpringWithDamping: 0.7, initialSpringVelocity: 30, options: .allowAnimatedContent, animations: ({
+            self.journalDailyLabel.center.x = self.view.frame.width / 2
+        }), completion: nil)
     }
 
     func showNavController() {
         performSegue(withIdentifier: "splashScreen", sender: self)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 

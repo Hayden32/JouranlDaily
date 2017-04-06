@@ -26,7 +26,7 @@ class JournalDailyController {
         let journal = JournalDaily(photoData: data, title: title, journalText: journalText)
         
         let record = CKRecord(journalDaily: journal)
-        cloudKitManager.save(record) { (error) in
+        cloudKitManager.privateDatabase.save(record) { (_,error) in
             
             if let error = error {
                 print("There was a error saving to CK. JournalDailyController: createJournal()")
@@ -40,16 +40,30 @@ class JournalDailyController {
         
     }
     
-//    func update(journal: JournalDaily) {
-//        
-//        journal.journalText =
-//    }
+    func update(journal: JournalDaily) {
+        
+        let record = CKRecord(journalDaily: journal)
+        
+        cloudKitManager.modifyRecords([record], perRecordCompletion: nil) { (records, error) in
+            if let error = error {
+                print(error.localizedDescription)
+            }
+        }
+        
+//        cloudKitManager.privateDatabase.save(record) { (record, error) in
+//            // 
+//            if let error = error {
+//                print(error.localizedDescription)
+//            }
+////            print("Record successfully saved to cloudKit")
+//        }
+    }
     
     func fetchJournalsFromCloudKit(completion: @escaping ([JournalDaily]) -> Void) {
         let predicate = NSPredicate(value: true)
         let query = CKQuery(recordType: "JournalDaily", predicate: predicate)
         
-        cloudKitManager.privateDataBase.perform(query, inZoneWith: nil) { (records, error) in
+        cloudKitManager.privateDatabase.perform(query, inZoneWith: nil) { (records, error) in
             guard let records = records else { return }
             let journals = records.flatMap({ JournalDaily(record: $0)})
             completion(journals)

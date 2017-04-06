@@ -42,7 +42,7 @@ class JournalDaily: CloudKitSyncable {
         return JournalDaily.kType
     }
     
-    
+    // Takes in a CKRecord and turns in into a model Object.
     convenience required init?(record: CKRecord) {
         guard let title = record[JournalDaily.kTitle] as? String,
             let journalText = record[JournalDaily.kJournaltext] as? String,
@@ -65,6 +65,8 @@ class JournalDaily: CloudKitSyncable {
     }
     
 }
+
+// Turns model into a CKRecord and saves it in cloudKit
 extension CKRecord {
     
     convenience init(journalDaily: JournalDaily) {
