@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GnB-Ny-XPj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GnB-Ny-XPj">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -26,7 +26,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="58"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vEX-8v-RyL" id="sin-kS-Bz0">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="58"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="57.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yx1-S0-vWR">
@@ -169,13 +169,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBQ-eP-fIC">
-                                <rect key="frame" x="320" y="698" width="74" height="30"/>
-                                <state key="normal" title="Add Image"/>
-                                <connections>
-                                    <action selector="addImageButtonTapped:" destination="6Qh-VI-gzE" eventType="touchUpInside" id="CTw-Kq-cXb"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozE-4I-aBd">
                                 <rect key="frame" x="124.33333333333334" y="698" width="165.66666666666666" height="30"/>
                                 <state key="normal" title="Start Recording"/>
@@ -183,23 +176,34 @@
                                     <action selector="microphoneTapped:" destination="6Qh-VI-gzE" eventType="touchUpInside" id="5kZ-IF-b9i"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBQ-eP-fIC">
+                                <rect key="frame" x="20" y="72" width="374" height="210"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="OBQ-eP-fIC" secondAttribute="height" multiplier="187:105" id="hMI-ON-VYa"/>
+                                </constraints>
+                                <state key="normal" title="Add Image"/>
+                                <connections>
+                                    <action selector="addImageButtonTapped:" destination="6Qh-VI-gzE" eventType="touchUpInside" id="CTw-Kq-cXb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96233385801315308" green="0.95961850881576538" blue="0.96924644708633423" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="OBQ-eP-fIC" secondAttribute="trailing" id="41Z-bz-tN4"/>
+                            <constraint firstItem="OBQ-eP-fIC" firstAttribute="top" secondItem="ukU-Z2-EdV" secondAttribute="bottom" constant="8" id="Bnh-iX-TNT"/>
                             <constraint firstItem="hcR-XN-eWz" firstAttribute="trailing" secondItem="dUG-GH-rP5" secondAttribute="trailingMargin" id="CJB-Fa-NNo"/>
                             <constraint firstItem="Klf-iF-jIO" firstAttribute="top" secondItem="kwY-QG-Lg4" secondAttribute="bottom" constant="4" id="G5a-ET-5IQ"/>
                             <constraint firstItem="ozE-4I-aBd" firstAttribute="centerX" secondItem="dUG-GH-rP5" secondAttribute="centerX" id="N6v-S2-1sM"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="OBQ-eP-fIC" secondAttribute="leading" id="NHM-6t-2ra"/>
                             <constraint firstItem="Klf-iF-jIO" firstAttribute="bottom" secondItem="hcR-XN-eWz" secondAttribute="top" constant="4" id="Ob3-nL-Jn1"/>
                             <constraint firstAttribute="leadingMargin" secondItem="kwY-QG-Lg4" secondAttribute="leading" id="PyW-ly-hJ8"/>
                             <constraint firstItem="hcR-XN-eWz" firstAttribute="leading" secondItem="dUG-GH-rP5" secondAttribute="leadingMargin" id="a3m-iM-nQX"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="OBQ-eP-fIC" secondAttribute="trailing" id="a6i-63-mZK"/>
                             <constraint firstItem="ozE-4I-aBd" firstAttribute="top" secondItem="hcR-XN-eWz" secondAttribute="bottom" constant="8" id="dGy-S1-EGi"/>
                             <constraint firstItem="Klf-iF-jIO" firstAttribute="leading" secondItem="dUG-GH-rP5" secondAttribute="leadingMargin" id="pBs-0r-GlS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kwY-QG-Lg4" secondAttribute="trailing" id="pib-BP-g9w"/>
                             <constraint firstItem="ozE-4I-aBd" firstAttribute="width" secondItem="dUG-GH-rP5" secondAttribute="width" multiplier="0.4" id="tgR-qg-XfR"/>
                             <constraint firstItem="kwY-QG-Lg4" firstAttribute="top" secondItem="ukU-Z2-EdV" secondAttribute="bottom" constant="8" id="wMD-B2-F5d"/>
-                            <constraint firstItem="MBs-jq-Rt5" firstAttribute="top" secondItem="OBQ-eP-fIC" secondAttribute="bottom" constant="8" id="xwy-ug-79n"/>
                             <constraint firstItem="MBs-jq-Rt5" firstAttribute="top" secondItem="ozE-4I-aBd" secondAttribute="bottom" constant="8" id="z9a-cr-U1w"/>
                             <constraint firstItem="Klf-iF-jIO" firstAttribute="trailing" secondItem="dUG-GH-rP5" secondAttribute="trailingMargin" id="ztf-Oe-UdF"/>
                         </constraints>
@@ -215,6 +219,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addImageButton" destination="OBQ-eP-fIC" id="qDb-iy-vCc"/>
                         <outlet property="journalPictureImageView" destination="kwY-QG-Lg4" id="Rrs-S1-WSa"/>
                         <outlet property="journalTextView" destination="hcR-XN-eWz" id="qyZ-Ef-Dcf"/>
                         <outlet property="microphoneButton" destination="ozE-4I-aBd" id="aQ8-fH-wu7"/>
@@ -228,7 +233,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1828" y="312.59370314842579"/>
+            <point key="canvasLocation" x="1827.5362318840582" y="312.22826086956525"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IO8-gK-K6z">

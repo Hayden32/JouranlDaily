@@ -17,6 +17,7 @@ class JournalDailyViewController: UIViewController, SFSpeechRecognizerDelegate, 
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var journalTextView: UITextView!
     @IBOutlet weak var microphoneButton: UIButton!
+    @IBOutlet weak var addImageButton: UIButton!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -58,7 +59,6 @@ class JournalDailyViewController: UIViewController, SFSpeechRecognizerDelegate, 
                 self.microphoneButton.isEnabled = isButtonEnabled
             }
         }
-        
     }
     
     private let speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: "en-US"))  //1
@@ -153,10 +153,11 @@ class JournalDailyViewController: UIViewController, SFSpeechRecognizerDelegate, 
     }
     
     @IBAction func addImageButtonTapped(_ sender: Any) {
+        addImageButton.setTitle("", for: .normal)
+        
         let image = UIImagePickerController()
         image.delegate = self
         image.sourceType = UIImagePickerControllerSourceType.photoLibrary
-        image.allowsEditing = false
         self.present(image, animated: true) {
             
         }
@@ -178,7 +179,7 @@ class JournalDailyViewController: UIViewController, SFSpeechRecognizerDelegate, 
             
             // save to cloudKit
             JournalDailyController.shared.update(journal: journal)
-
+            
         } else {        // create new entry
             
             JournalDailyController.shared.createJournal(image: photo, title: title, journalText: journalText) { (error) in
@@ -191,9 +192,6 @@ class JournalDailyViewController: UIViewController, SFSpeechRecognizerDelegate, 
                 }
             }
         }
-        
-//        _ = self.navigationController?.popToRootViewController(animated: true)
-        
     }
     
     func dismissKeyboard() {
