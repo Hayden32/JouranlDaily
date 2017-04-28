@@ -37,7 +37,6 @@ class JournalDailyController {
                 completion(nil)
             }
         }
-        
     }
     
     func update(journal: JournalDaily) {
@@ -59,17 +58,59 @@ class JournalDailyController {
 //        }
     }
     
-    func fetchJournalsFromCloudKit(completion: @escaping ([JournalDaily]) -> Void) {
+    func fetchJournalsFromCloudKit(completion: @escaping () -> Void) {
         let predicate = NSPredicate(value: true)
         let query = CKQuery(recordType: "JournalDaily", predicate: predicate)
         
         cloudKitManager.privateDatabase.perform(query, inZoneWith: nil) { (records, error) in
             guard let records = records else { return }
             let journals = records.flatMap({ JournalDaily(record: $0)})
-            completion(journals)
+            self.journals = journals
+            completion()
         }
     }
     
+    let formatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .long
+        dateFormatter.doesRelativeDateFormatting = false
+        
+        return dateFormatter
+    }()
+    
+    func filterJournalsBy(month: String) -> [JournalDaily] {
+        
+        var filteredJournals: [JournalDaily] = []
+        
+        for journal in self.journals {
+            let timestampString =  journal.timeStamp.returnMonthOfTimestamp()
+            if timestampString.contains(month) {
+                filteredJournals.append(journal)
+            }
+        }
+        
+        let sortedJournals = filteredJournals.sorted(by: { $0.0.timeStamp > $0.1.timeStamp } )
+        
+        return sortedJournals
+    }
 }
+
+extension Date {
+    
+    func returnMonthOfTimestamp() -> String {
+        
+        let formatter: DateFormatter = {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateStyle = .long
+            dateFormatter.doesRelativeDateFormatting = false
+            
+            return dateFormatter
+        }()
+        
+        let month = formatter.string(from: self)
+        return month
+    }
+}
+
 
 

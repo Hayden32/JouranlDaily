@@ -9,13 +9,18 @@
 import UIKit
 
 class JournalDailyTableViewController: UITableViewController {
+
+    let monthsInYear = ["December", "November", "October", "September", "August", "July", "June", "May", "April", "March", "February", "January"]
     
-//    var journals: [JournalDaily] = []
+//    enum Months: String {
+//        case January = monthsInYear[0]
+//        case February = "February"
+//        case March = "March"
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        JournalDailyController.shared.fetchJournalsFromCloudKit { (journals) in
-            JournalDailyController.shared.journals = journals
+        JournalDailyController.shared.fetchJournalsFromCloudKit { 
             
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -32,16 +37,34 @@ class JournalDailyTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return JournalDailyController.shared.journals.count
+        let filteredJournals = JournalDailyController.shared.filterJournalsBy(month: monthsInYear[section])
+        return filteredJournals.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "journalCell", for: indexPath) as? JournalDailyTableViewCell else { return UITableViewCell() }
-        let journal = JournalDailyController.shared.journals[indexPath.row]
+        
+        let filteredJournals = JournalDailyController.shared.filterJournalsBy(month: monthsInYear[indexPath.section])
+        
+        let journal = filteredJournals[indexPath.row]
         
         cell.updateWithJournal(journal: journal)
         return cell
     }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return monthsInYear.count
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return monthsInYear[section]
+    }
+//    
+//    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//       let backgroundColor = UIView.backgroundColor = UIColor(red: 21 / 255.0, green: 30 / 255.0, blue: 46 / 255.0, alpha: 100)
+//
+//        return
+//    }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {

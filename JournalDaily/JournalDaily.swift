@@ -46,7 +46,7 @@ class JournalDaily: CloudKitSyncable {
     convenience required init?(record: CKRecord) {
         guard let title = record[JournalDaily.kTitle] as? String,
             let journalText = record[JournalDaily.kJournaltext] as? String,
-            let timeStamp = record.creationDate,
+            let timeStamp = record[JournalDaily.kTimeStamp] as? Date,
             let photoAsset = record[JournalDaily.kPhotoData] as? CKAsset
             else { return nil }
         let photoData = try? Data(contentsOf: photoAsset.fileURL)

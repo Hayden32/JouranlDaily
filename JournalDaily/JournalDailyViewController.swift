@@ -192,7 +192,7 @@ class JournalDailyViewController: UIViewController, SFSpeechRecognizerDelegate, 
             }
         }
         
-        _ = self.navigationController?.popToRootViewController(animated: true)
+//        _ = self.navigationController?.popToRootViewController(animated: true)
         
     }
     
