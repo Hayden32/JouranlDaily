@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GnB-Ny-XPj">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -12,31 +12,31 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Jouranl's-->
+        <!--Journals-->
         <scene sceneID="Mzu-xO-RmK">
             <objects>
                 <tableViewController storyboardIdentifier="journalDailyTVC" id="0s2-GY-X5L" customClass="JournalDailyTableViewController" customModule="JournalDaily" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="58" sectionHeaderHeight="28" sectionFooterHeight="28" id="C3u-na-Aso">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="journalCell" rowHeight="58" id="vEX-8v-RyL" customClass="JournalDailyTableViewCell" customModule="JournalDaily" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="58"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="58"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vEX-8v-RyL" id="sin-kS-Bz0">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="57.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="57.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yx1-S0-vWR">
-                                            <rect key="frame" x="325.66666666666674" y="0.0" width="88.333333333333314" height="58"/>
+                                            <rect key="frame" x="231.5" y="0.0" width="88.5" height="58"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="yx1-S0-vWR" secondAttribute="height" multiplier="29:19" id="6lx-m5-8gy"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vdb-B8-b10">
-                                            <rect key="frame" x="8" y="8" width="307.66666666666669" height="42"/>
+                                            <rect key="frame" x="8" y="8" width="213.5" height="42"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -65,7 +65,7 @@
                             <outlet property="delegate" destination="0s2-GY-X5L" id="sfa-jg-fSs"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Jouranl's" id="vxh-nz-V2h">
+                    <navigationItem key="navigationItem" title="Journals" id="vxh-nz-V2h">
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="ABK-d9-Jj7">
                             <connections>
                                 <segue destination="6Qh-VI-gzE" kind="show" identifier="" id="xCM-b4-9IG"/>
@@ -77,7 +77,7 @@
             </objects>
             <point key="canvasLocation" x="1030" y="313"/>
         </scene>
-        <!--Jouranl Entry-->
+        <!--Journal Entry-->
         <scene sceneID="SRE-fa-aOd">
             <objects>
                 <viewController id="Z0P-yg-Lo4" customClass="JouranlDailyEditingViewController" customModule="JournalDaily" customModuleProvider="target" sceneMemberID="viewController">
@@ -86,23 +86,23 @@
                         <viewControllerLayoutGuide type="bottom" id="b2v-gM-q5S"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="agq-ye-rEc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cua-tG-k5g">
-                                <rect key="frame" x="20" y="64" width="374" height="210.33333333333331"/>
+                                <rect key="frame" x="16" y="64" width="288" height="162"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="cua-tG-k5g" secondAttribute="height" multiplier="16:9" id="Ty4-n8-qcd"/>
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wvf-b1-HH7">
-                                <rect key="frame" x="20" y="303.33333333333326" width="374" height="412.66666666666674"/>
+                                <rect key="frame" x="16" y="255" width="288" height="293"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Title your journal: " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SbI-Y2-5Ir">
-                                <rect key="frame" x="20" y="278.33333333333331" width="374" height="21"/>
+                                <rect key="frame" x="16" y="230" width="288" height="21"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -122,7 +122,7 @@
                             <constraint firstItem="cua-tG-k5g" firstAttribute="top" secondItem="VgN-ed-oos" secondAttribute="bottom" id="cPt-SY-ygV"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Jouranl Entry" id="K8y-hl-JOi">
+                    <navigationItem key="navigationItem" title="Journal Entry" id="K8y-hl-JOi">
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="OeW-qS-XWE">
                             <connections>
                                 <segue destination="6Qh-VI-gzE" kind="show" identifier="toJournalEditingVC" id="lCw-aa-IN7"/>
@@ -148,36 +148,36 @@
                         <viewControllerLayoutGuide type="bottom" id="MBs-jq-Rt5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dUG-GH-rP5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hcR-XN-eWz">
-                                <rect key="frame" x="20" y="312.33333333333326" width="374" height="377.66666666666674"/>
+                                <rect key="frame" x="16" y="264" width="288" height="258"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kwY-QG-Lg4">
-                                <rect key="frame" x="20" y="72" width="374" height="210.33333333333331"/>
+                                <rect key="frame" x="16" y="72" width="288" height="162"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="kwY-QG-Lg4" secondAttribute="height" multiplier="16:9" id="L6j-zR-40n"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Klf-iF-jIO">
-                                <rect key="frame" x="20" y="286.33333333333331" width="374" height="30"/>
+                                <rect key="frame" x="16" y="238" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozE-4I-aBd">
-                                <rect key="frame" x="124.33333333333334" y="698" width="165.66666666666666" height="30"/>
+                                <rect key="frame" x="96" y="530" width="128" height="30"/>
                                 <state key="normal" title="Start Recording"/>
                                 <connections>
                                     <action selector="microphoneTapped:" destination="6Qh-VI-gzE" eventType="touchUpInside" id="5kZ-IF-b9i"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBQ-eP-fIC">
-                                <rect key="frame" x="20" y="72" width="374" height="210"/>
+                                <rect key="frame" x="16" y="72" width="288" height="161.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="OBQ-eP-fIC" secondAttribute="height" multiplier="187:105" id="hMI-ON-VYa"/>
                                 </constraints>
@@ -262,47 +262,20 @@
                         <viewControllerLayoutGuide type="bottom" id="0I1-4m-igc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="LkR-wI-B0O">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EagleScreen" translatesAutoresizingMaskIntoConstraints="NO" id="isj-qo-Vbj">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Journal Daily" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rPa-dQ-nIY">
-                                <rect key="frame" x="20" y="343" width="374" height="51"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="isj-qo-Vbj" firstAttribute="width" secondItem="LkR-wI-B0O" secondAttribute="height" multiplier="9:16" id="8g1-uu-CeI"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="isj-qo-Vbj" secondAttribute="trailing" constant="-20" id="AwK-qG-bVt"/>
-                            <constraint firstItem="0I1-4m-igc" firstAttribute="top" secondItem="isj-qo-Vbj" secondAttribute="bottom" id="HaO-gn-2eX"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="rPa-dQ-nIY" secondAttribute="trailing" id="J69-Q5-mMO"/>
-                            <constraint firstItem="isj-qo-Vbj" firstAttribute="top" secondItem="Rzc-dP-VyY" secondAttribute="bottom" constant="-20" id="Mru-7g-fGO"/>
-                            <constraint firstItem="isj-qo-Vbj" firstAttribute="leading" secondItem="LkR-wI-B0O" secondAttribute="leadingMargin" constant="-20" id="cch-Xe-zqv"/>
-                            <constraint firstItem="rPa-dQ-nIY" firstAttribute="top" secondItem="Rzc-dP-VyY" secondAttribute="bottom" constant="323" id="imi-q4-82Z"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="rPa-dQ-nIY" secondAttribute="leading" id="w0f-Mi-Fua"/>
-                            <constraint firstItem="0I1-4m-igc" firstAttribute="top" secondItem="rPa-dQ-nIY" secondAttribute="bottom" constant="342" id="yf6-5F-Yrb"/>
-                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="journalDailyLabel" destination="rPa-dQ-nIY" id="shg-9O-QhW"/>
                         <segue destination="XLu-V1-qM9" kind="show" identifier="splashScreen" id="gE2-Y9-wHp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c1g-ww-iF1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-555.07246376811599" y="312.22826086956525"/>
+            <point key="canvasLocation" x="-669" y="312"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="EagleScreen" width="270" height="480"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="lCw-aa-IN7"/>
     </inferredMetricsTieBreakers>

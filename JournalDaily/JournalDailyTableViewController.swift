@@ -12,12 +12,6 @@ class JournalDailyTableViewController: UITableViewController {
 
     let monthsInYear = ["December", "November", "October", "September", "August", "July", "June", "May", "April", "March", "February", "January"]
     
-//    enum Months: String {
-//        case January = monthsInYear[0]
-//        case February = "February"
-//        case March = "March"
-//    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         JournalDailyController.shared.fetchJournalsFromCloudKit { 
@@ -81,8 +75,9 @@ class JournalDailyTableViewController: UITableViewController {
         if segue.identifier == "toJournalVC" {
             guard let indexPath = tableView.indexPathForSelectedRow,
                 let journalDetailVC = segue.destination as? JouranlDailyEditingViewController else { return }
-            let journals = JournalDailyController.shared.journals[indexPath.row]
-            journalDetailVC.journal = journals
+            let filteredJournals = JournalDailyController.shared.filterJournalsBy(month: monthsInYear[indexPath.section])
+            let journal = filteredJournals[indexPath.row]
+            journalDetailVC.journal = journal
         }
     }
 }

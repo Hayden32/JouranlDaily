@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JournalDaily/JournalDailyViewController.swift"
-            timestampString = "515104283.028265"
+            timestampString = "515345238.915375"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "183"
-            endingLineNumber = "183"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
             landmarkName = "saveButtonTapped(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -96,6 +96,22 @@
             startingLineNumber = "36"
             endingLineNumber = "36"
             landmarkName = "createJournal(image:title:journalText:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JournalDaily/JournalDailyTableViewController.swift"
+            timestampString = "515348335.93903"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

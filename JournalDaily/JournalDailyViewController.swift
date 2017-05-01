@@ -127,9 +127,6 @@ class JournalDailyViewController: UIViewController, SFSpeechRecognizerDelegate, 
         } catch {
             print("audioEngine couldn't start because of an error.")
         }
-        
-        journalTextView.text = "Say something, I'm listening!"
-        
     }
     
     func speechRecognizer(_ speechRecognizer: SFSpeechRecognizer, availabilityDidChange available: Bool) {
