@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import CloudKit
 
-class JournalDaily: CloudKitSyncable {
+class JournalDaily: CloudKitSyncable, Equatable {
     
     static let kType = "JouranlDaily"
     static let kPhotoData = "photoData"
@@ -78,5 +78,8 @@ extension CKRecord {
         self[JournalDaily.kTimeStamp] = journalDaily.timeStamp as CKRecordValue?
         self.setValue(CKAsset(fileURL: journalDaily.temporaryPhotoURL), forKey: JournalDaily.kPhotoData)
     }
-    
+}
+
+func ==(lhs: JournalDaily, rhs: JournalDaily) -> Bool {
+    return lhs === rhs
 }

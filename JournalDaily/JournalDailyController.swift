@@ -39,6 +39,30 @@ class JournalDailyController {
         }
     }
     
+    func deleteJournal(withRecordID recordID: CKRecordID, completion: @escaping (CKRecordID?, Error?) -> Void) {
+        cloudKitManager.privateDatabase.delete(withRecordID: recordID) { (recordID, error) in
+            if let error = error {
+                print("There was an error deleting from CloudKit. \(error.localizedDescription)")
+                completion(recordID, error)
+            }
+        }
+    }
+    
+    
+    func delete(withRecordID recordID: CKRecordID, completion: @escaping () -> Void) {
+        guard let journalIndex = journals.index(where: {$0.cloudKitRecordID == recordID })
+            else { completion(); return }
+        self.journals.remove(at: journalIndex)
+        cloudKitManager.deleteRecordWithID(recordID) { (_, error) in
+            if let error = error {
+                print("Error: Could not delete recordID from cloudKit. \(error.localizedDescription)")
+                completion()
+                return
+            }
+            print("Deleted Successfully")
+        }
+    }
+    
     func update(journal: JournalDaily) {
         
         let record = CKRecord(journalDaily: journal)

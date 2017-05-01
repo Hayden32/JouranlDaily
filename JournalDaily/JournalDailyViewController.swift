@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import CloudKit
 import Speech
 
 class JournalDailyViewController: UIViewController, SFSpeechRecognizerDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     var journal: JournalDaily?
+    var cloudKitManager = CloudKitManager()
     
     @IBOutlet weak var journalPictureImageView: UIImageView!
     @IBOutlet weak var titleTextField: UITextField!
