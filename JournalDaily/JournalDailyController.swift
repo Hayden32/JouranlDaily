@@ -13,9 +13,7 @@ import CloudKit
 class JournalDailyController {
     
     var journals: [JournalDaily] = []
-    
     static let shared = JournalDailyController()
-    
     let cloudKitManager = CloudKitManager()
 
     func createJournal(image: UIImage, title: String, journalText: String, completion: @escaping (Error?) -> Void) {
@@ -39,6 +37,7 @@ class JournalDailyController {
         }
     }
     
+    // MARK: - Delete
     func deleteJournal(withRecordID recordID: CKRecordID, completion: @escaping (CKRecordID?, Error?) -> Void) {
         cloudKitManager.privateDatabase.delete(withRecordID: recordID) { (recordID, error) in
             if let error = error {
@@ -47,22 +46,8 @@ class JournalDailyController {
             }
         }
     }
-    
-    
-    func delete(withRecordID recordID: CKRecordID, completion: @escaping () -> Void) {
-        guard let journalIndex = journals.index(where: {$0.cloudKitRecordID == recordID })
-            else { completion(); return }
-        self.journals.remove(at: journalIndex)
-        cloudKitManager.deleteRecordWithID(recordID) { (_, error) in
-            if let error = error {
-                print("Error: Could not delete recordID from cloudKit. \(error.localizedDescription)")
-                completion()
-                return
-            }
-            print("Deleted Successfully")
-        }
-    }
-    
+
+    // MARK: - Update
     func update(journal: JournalDaily) {
         
         let record = CKRecord(journalDaily: journal)
@@ -72,14 +57,6 @@ class JournalDailyController {
                 print(error.localizedDescription)
             }
         }
-        
-//        cloudKitManager.privateDatabase.save(record) { (record, error) in
-//            // 
-//            if let error = error {
-//                print(error.localizedDescription)
-//            }
-////            print("Record successfully saved to cloudKit")
-//        }
     }
     
     func fetchJournalsFromCloudKit(completion: @escaping () -> Void) {
@@ -114,7 +91,6 @@ class JournalDailyController {
         }
         
         let sortedJournals = filteredJournals.sorted(by: { $0.0.timeStamp > $0.1.timeStamp } )
-        
         return sortedJournals
     }
 }
